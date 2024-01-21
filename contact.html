@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BK Clothing</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="LOGO.png" alt="" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html" >About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        
+        </div>
+
+
+    </section>
+
+    <section id="page-header" class="contact-header">
+
+        <h2>#let'sTalk</h2>
+
+        <p style="color: white;">We love to hear from you!</p>
+
+    </section>
+
+    <section id="contact-details" class="section-p1">
+        <div class="details">
+            <span>Get in touch</span>
+            <h2>Visit Us</h2>
+            <h3>Head Office</h3>
+            <div>
+                <li>
+                    <i class="fal fa-map"></i>
+                    <p>Near BCM School, Ludhiana, Punjab</p>
+                </li>
+                <li>
+                    <i class="fal fa-envelope"></i>
+                    <p>contact@example.com</p>
+                </li>
+                <li>
+                    <i class="fal fa-phone-alt"></i>
+                    <p>0987654321</p>
+                </li>
+                <li>
+                    <i class="fal fa-clock"></i>
+                    <p>Mon to Sat: 9 am to 9 pm</p>
+                </li>
+            </div>
+
+        </div>
+        <div class="map">
+            <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13692.366516750695!2d75.89347518168971!3d30.9120628518748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a832d7cb35bfd%3A0xae029a8fa20d28!2sSector%2032A%2C%20Ludhiana%2C%20Punjab!5e0!3m2!1sen!2sin!4v1705223821196!5m2!1sen!2sin"
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="form-details">
+        <form action="" name="submit-to-google-sheet">
+            <span>Leave a message</span>
+            <h2>We love to hear from you</h2>
+            <input type="text" placeholder="Your Name" id="fname" name="Name">
+            <input type="text" placeholder="Email" id="femail" name="Email">
+            <input type="text" placeholder="Number" id="fnumber" name="Number">
+            <textarea name="Message" id="ftextarea" cols="30" rows="10" placeholder="Your message"></textarea>
+            <button class="normal" id="fbutton">Submit</button>
+        </form>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletter</h4>
+            <p>Get email about latest trends</p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Enter your email">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="first">
+            <img src="LOGO.PNG" alt="">
+            <p id="heading">Contact</p>
+            <p id="smallinfo">Address: Ludhiana, Punjab, India</p>
+            <p id="smallinfo">Phone: 0987654321</p>
+            <p id="smallinfo">Follow Us</p>
+        </div>
+        <div class="second">
+            <p id="heading">About</p>
+            <p id="smallinfo">About us</p>
+            <p id="smallinfo">Delivery Information</p>
+            <p id="smallinfo">Privacy Policy</p>
+            <p id="smallinfo">T & C</p>
+            <p id="smallinfo">Contact Us</p>
+        </div>
+        <div class="third">
+            <p id="heading">My Account</p>
+            <p id="smallinfo">Sign in</p>
+            <p id="smallinfo">View Cart</p>
+            <p id="smallinfo">My Wishlist</p>
+        </div>
+        <div class="fourth">
+            <p id="heading">Install App</p>
+            <p id="smallinfo">From App store or Play store</p>
+            <div class="pay">
+                <img src="pay/app.jpg" alt="">
+                <img src="pay/play.jpg" alt="">
+            </div>
+            <p id="smallinfo">Secured payment gateways</p>
+            <img src="pay/pay.png" alt="">
+        </div>
+    </footer>
+
+    <div class="sub-footer">
+        <p style="color: black;">&copy 2024 - Made with ❤️ by Bhavay Kaushal</p>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzMKdCS_5CiJj1fGnFneiQdmW6_m-ufb49bxFXT48cA3t5JXX1IAWffGJyt3fq34pvChg/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+                form.reset()
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
