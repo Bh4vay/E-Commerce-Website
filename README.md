@@ -1,6 +1,6 @@
-E-Commerce-Website<br>
+BK Clothing<br>
 
-Creating a stunning and elegant website with this responsive CSS template.
+Creating a stunning and elegant E- Commerce website with this responsive CSS.
 
 ## Table of Contents
 
